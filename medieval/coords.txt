@@ -1,0 +1,5 @@
+Dark Ages Europe,5.5,7.2,21.3,43.1
+Arabic Caliphates,35.4,46.9,30.1,35.7
+Byzantium,30.1,25.5,20.0,19.6
+Mongol Empire,50.9,2.9,29.0,23.7
+China,83.2,17.6,13.6,47.3

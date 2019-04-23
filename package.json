@@ -1,0 +1,19 @@
+{
+  "name": "World History",
+  "version": "1.0.0",
+  "description": "CSC 337 Final Project",
+  "main": "worldhistory_Heroku.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uacs337spring2019/final-project-johnm.git"
+  },
+  "author": "John Merems",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uacs337spring2019/final-project-johnm/issues"
+  },
+  "homepage": "https://github.com/uacs337spring2019/final-project-johnm#readme"
+}

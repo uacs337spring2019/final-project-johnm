@@ -1,0 +1,117 @@
+/*
+John Merems
+April 16, 2019
+CSC 337
+Final Project
+
+CSS for worldhistory.html
+
+
+*/
+#civinfo, #mapinfo, #newinfo {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 12pt;
+}
+
+#newinfo {
+	width: 60%;
+	text-align: center;
+	border: 1px black solid;
+	margin-top: 20px;
+}
+
+#newinfo textarea {
+	width: 90%;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#newinfo p {
+	margin-bottom: 1px;
+}
+
+#header p {
+	text-align: center;
+	font-size: 12pt;
+}
+
+h1, h2, h3 {
+	font-family: "Trebuchet MS","Helvetica",sans-serif;
+	text-align: center;
+}
+
+h3 {
+	font-size: 14pt;
+}
+
+h2 {
+	font-size: 18pt;
+}
+
+h1 {
+	font-size: 32pt;
+}
+
+#newinfo, .infosection {
+	clear: both;
+}
+
+#civinfo img {
+	width: 15%;
+}
+
+.floatleft {
+	float: left;
+	margin-right: 5px;
+}
+
+.floatright {
+	float: right;
+	margin-left: 5px;
+}
+
+#eras {
+	display: flex;
+	justify-content: center;
+}
+
+#eras button {
+	font-size: 12pt;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+#map, #mapdiv {
+	/*width: 1000px;*/
+}
+
+#mapdiv {
+	width: 90%;
+	border: yellow solid 5px;
+}
+
+#map {
+	width: 100%;
+	/*width: 1000px;*/
+	/*border: yellow solid 5px;*/
+}
+
+#mapdiv {
+	/*width: 1000px;*/
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+.civilization {
+	position: absolute;
+}
+
+.highlight {
+	border: red solid 2px;
+}
