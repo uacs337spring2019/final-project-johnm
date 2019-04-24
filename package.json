@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "CSC 337 Final Project",
   "main": "worldhistory_Heroku.js",
+  "dependencies": {
+     "express": "*",
+	 "body-parser": "*"
+  }
   "scripts": {
     "start": "node worldhistory_service_Heroku.js"
   },
