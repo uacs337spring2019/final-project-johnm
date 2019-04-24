@@ -86,14 +86,14 @@ JS for worldhistory.html
 		
 		switch(g_map) {
 			case "ancient":
-				url = "http://worldhistory-jm.herokuapp.com:process.env.PORT?map=ancient&mode=mapdescription"
+				url = "https://worldhistory-jm.herokuapp.com:process.env.PORT?map=ancient&mode=mapdescription"
 				break;
 
 			case "medieval":
-				url = "http://worldhistory-jm.herokuapp.com:process.env.PORT?map=medieval&mode=mapdescription"
+				url = "https://worldhistory-jm.herokuapp.com:process.env.PORT?map=medieval&mode=mapdescription"
 				break;
 			case "earlymodern":
-				url = "http://worldhistory-jm.herokuapp.com:process.env.PORT?map=earlymodern&mode=mapdescription"
+				url = "https://worldhistory-jm.herokuapp.com:process.env.PORT?map=earlymodern&mode=mapdescription"
 				break;
 			default:
 				break;
@@ -134,15 +134,15 @@ JS for worldhistory.html
 		
 		switch(g_map) {
 			case "ancient":
-				url = "http://worldhistory-jm.herokuapp.com:process.env.PORT?map=ancient&mode=coords"				
+				url = "https://worldhistory-jm.herokuapp.com:process.env.PORT?map=ancient&mode=coords"				
 				break;
 				
 			case "medieval":
-				url = "http://worldhistory-jm.herokuapp.com:process.env.PORT?map=medieval&mode=coords"
+				url = "https://worldhistory-jm.herokuapp.com:process.env.PORT?map=medieval&mode=coords"
 				break
 				
 			case "earlymodern":
-				url = "http://worldhistory-jm.herokuapp.com:process.env.PORT?map=earlymodern&mode=coords"
+				url = "https://worldhistory-jm.herokuapp.com:process.env.PORT?map=earlymodern&mode=coords"
 				break;
 				
 			default:
@@ -200,7 +200,7 @@ JS for worldhistory.html
 		let newinfo = document.getElementById("newinfo");
 		newinfo.innerHTML = "";
 
-		let url = "http://worldhistory-jm.herokuapp.com:process.env.PORT?map=" + g_map + "&mode=info&civ=" + g_civ;
+		let url = "https://worldhistory-jm.herokuapp.com:process.env.PORT?map=" + g_map + "&mode=info&civ=" + g_civ;
 		
 		let title = document.createElement("h2");
 		title.innerHTML = g_civ;
@@ -306,7 +306,7 @@ JS for worldhistory.html
 
 			console.log(paragraph);
 
-			let url = "http://worldhistory-jm.herokuapp.com:process.env.PORT";
+			let url = "https://worldhistory-jm.herokuapp.com:process.env.PORT";
 			fetch(url, fetchOptions)
 				.then(checkStatus)
 				.then(function(responseText) {
