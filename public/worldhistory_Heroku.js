@@ -12,8 +12,8 @@ JS for worldhistory.html
 (function() {
 "use strict";
 	
-	let g_map = "";
-	let g_civ = "";
+	let gMap = "";
+	let gCiv = "";
 	
 	/**
 	Loads the ancient map on startup and sets the event triggers for the map buttons
@@ -28,17 +28,17 @@ JS for worldhistory.html
 	
 	/**
 	Loads a map based on which button event was triggered
-	Sets g_map based on the button id
-	On load, the g_map is set to ancient
+	Sets gMap based on the button id
+	On load, the gMap is set to ancient
 	Clears all elements on the screen
 	Calls MapDescription and Highlights functions
 	**/
 	function LoadMap() {
-		if(g_map === "") {
-			g_map = "ancient";
+		if(gMap === "") {
+			gMap = "ancient";
 		}
 		else {
-			g_map = this.id;
+			gMap = this.id;
 		}
 		
 		let mapdiv = document.getElementById("mapdiv");
@@ -53,9 +53,9 @@ JS for worldhistory.html
 		
 		let map = document.createElement("img");
 		map.id = "map";
-		map.src = g_map + ".jpg";
+		map.src = gMap + ".jpg";
 		let alt = "";
-		switch(g_map) {
+		switch(gMap) {
 			case "ancient":
 				alt = "Ptolemy World Map";
 				break;
@@ -77,23 +77,23 @@ JS for worldhistory.html
 	}
 	
 	/**
-	Creates the map description based on g_map
+	Creates the map description based on gMap
 	Fetches the map description
 	**/
 	function CreateMapDescription() {
 		
 		let url = "";
 		
-		switch(g_map) {
+		switch(gMap) {
 			case "ancient":
-				url = "https://worldhistory-jm.herokuapp.com:?map=ancient&mode=mapdescription"
+				url = "https://worldhistory-jm.herokuapp.com:?map=ancient&mode=mapdescription";
 				break;
 
 			case "medieval":
-				url = "https://worldhistory-jm.herokuapp.com:?map=medieval&mode=mapdescription"
+				url = "https://worldhistory-jm.herokuapp.com:?map=medieval&mode=mapdescription";
 				break;
 			case "earlymodern":
-				url = "https://worldhistory-jm.herokuapp.com:?map=earlymodern&mode=mapdescription"
+				url = "https://worldhistory-jm.herokuapp.com:?map=earlymodern&mode=mapdescription";
 				break;
 			default:
 				break;
@@ -125,24 +125,24 @@ JS for worldhistory.html
 	
 	/**
 	Creates the civilization area highlights
-	Fetches based on g_map
+	Fetches based on gMap
 	Set onmouseover, onmouseleave, and onmousedown triggers for each highlight area
 	**/
 	function CreateHighlights() {
 		
 		let url = "";
 		
-		switch(g_map) {
+		switch(gMap) {
 			case "ancient":
-				url = "https://worldhistory-jm.herokuapp.com:?map=ancient&mode=coords"				
+				url = "https://worldhistory-jm.herokuapp.com:?map=ancient&mode=coords";				
 				break;
 				
 			case "medieval":
-				url = "https://worldhistory-jm.herokuapp.com:?map=medieval&mode=coords"
-				break
+				url = "https://worldhistory-jm.herokuapp.com:?map=medieval&mode=coords";
+				break;
 				
 			case "earlymodern":
-				url = "https://worldhistory-jm.herokuapp.com:?map=earlymodern&mode=coords"
+				url = "https://worldhistory-jm.herokuapp.com:?map=earlymodern&mode=coords";
 				break;
 				
 			default:
@@ -177,17 +177,17 @@ JS for worldhistory.html
 	}
 	
 	/**
-	Sets g_civ based on the highlight id that triggered it
+	Sets gCiv based on the highlight id that triggered it
 	Calls CreateCivInfo
 	**/
 	function CivHandler() {
-		g_civ = this.id;
+		gCiv = this.id;
 		CreateCivInfo();//map,civ);
 	}
 	
 	/**
 	Populates the civinfo div
-	Fetches data based on g_map and g_civ
+	Fetches data based on gMap and gCiv
 	Moves the screen to have this area in view
 	Calls CreateInputs
 	**/
@@ -200,10 +200,10 @@ JS for worldhistory.html
 		let newinfo = document.getElementById("newinfo");
 		newinfo.innerHTML = "";
 
-		let url = "https://worldhistory-jm.herokuapp.com:?map=" + g_map + "&mode=info&civ=" + g_civ;
+		let url = "https://worldhistory-jm.herokuapp.com:?map=" + gMap + "&mode=info&civ=" + gCiv;
 		
 		let title = document.createElement("h2");
-		title.innerHTML = g_civ;
+		title.innerHTML = gCiv;
 		document.getElementById("civinfo").appendChild(title);
 		
 		fetch(url)
@@ -293,8 +293,8 @@ JS for worldhistory.html
 		let image = document.getElementById("imageinput").value;
 		
 		if(text !== "") {
-			const paragraph = {map: g_map, civilization: g_civ, text: text,
-					 image: image};
+			const paragraph = {map: gMap, civilization: gCiv, text: text,
+					image: image};
 			const fetchOptions = {
 				method : 'POST',
 				headers : {
@@ -310,7 +310,9 @@ JS for worldhistory.html
 			fetch(url, fetchOptions)
 				.then(checkStatus)
 				.then(function(responseText) {
-					CreateCivInfo();
+					if(responseText){
+						CreateCivInfo();
+					}
 				})
 				.catch(function(error) {
 					console.log(error);
