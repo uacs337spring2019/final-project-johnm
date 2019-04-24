@@ -1,8 +1,0 @@
-North American Colonies,28.3,35.9,6.8,7.1
-Spanish Conquests,26.8,44.7,9.3,18.4
-West African Slave Trade,52.1,45.0,10.2,9.0
-Maghul Empire,74.7,41.9,5.2,6.8
-Ottoman Empire,64.2,37.4,7.7,8.7
-Renaissance Europe,56.9,30.2,6.6,8.8
-China,80.7,36.8,6.5,6.8
-Japanese Shogunate,87.8,32.1,2.0,5.8

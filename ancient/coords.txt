@@ -1,8 +1,0 @@
-Roman Empire,28.5,29.5,5.2,8.0
-Carthage,25.0,38.7,8.0,6.0
-Egypt,34.0,44.7,6.0,14.6
-Greek City-States,34.2,35.1,5.5,7.3
-Persian Empire,41.0,37.3,12.0,11.7
-India,61.5,44.1,10.0,14.6
-Kingdom of Funan,82.0,30.7,8.0,14.6
-China,67.0,14.8,9.0,13.2
