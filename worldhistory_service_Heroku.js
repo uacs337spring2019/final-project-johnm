@@ -149,4 +149,4 @@ function get_coords(map) {
 	return json;
 }
 
-app.listen(3000);
+app.listen(process.env.PORT);
