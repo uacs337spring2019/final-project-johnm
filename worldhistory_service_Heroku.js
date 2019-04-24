@@ -43,7 +43,7 @@ app.post('/', jsonParser, function (req, res) {
 	
 	let paragraph = "\r\n" + text + ":::" + image;
 	
-	let path = map + "/" + civ + "/info.txt";
+	let path = "public/" + map + "/" + civ + "/info.txt";
 	
 	fs.appendFile(path,paragraph,function(err) {
 		if(err) {
@@ -85,7 +85,7 @@ app.get('/', function (req, res) {
 **/
 function get_civinfo(map,civ) {
 	let json = {};
-	let path = map + "/" + civ + "/info.txt";
+	let path = "public/" + map + "/" + civ + "/info.txt";
 	let file = fs.readFileSync(path,'utf8');
 	let lines = file.split("\r\n");
 
@@ -110,7 +110,7 @@ Gets the map description of the map
 **/
 function get_mapdescription(map) {
 	let json = {};
-	let path = map + "/mapdescription.txt";
+	let path = "public/" + map + "/mapdescription.txt";
 	let file = fs.readFileSync(path,'utf8');
 	let lines = file.split("\r\n");
 
@@ -126,7 +126,7 @@ Gets the coordinates of the civilizations of the map
 **/
 function get_coords(map) {
 	let json = {};
-	let path = map + "/coords.txt";
+	let path = "public/" + map + "/coords.txt";
 	let file = fs.readFileSync(path,'utf8');
 	let lines = file.split("\r\n");
 	let civilizations = [];
