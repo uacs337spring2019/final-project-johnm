@@ -4,8 +4,7 @@
   "description": "CSC 337 Final Project",
   "main": "worldhistory_Heroku.js",
   "scripts": {
-	"start": "node worldhistory_service_Heroku.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node worldhistory_service_Heroku.js"
   },
   "repository": {
     "type": "git",
