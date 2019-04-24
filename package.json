@@ -6,7 +6,7 @@
   "dependencies": {
      "express": "*",
 	 "body-parser": "*"
-  }
+  },
   "scripts": {
     "start": "node worldhistory_service_Heroku.js"
   },
